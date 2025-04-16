@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Untitled Sans";
+  src: url("../../../public/fonts/untitled-sans.woff2") format("woff2");
+}
+
+:root {
+  --font-untitled-sans: "Untitled Sans", sans-serif;
+  font-size: 14px;
+}
+
+
+/* SETTINGS FOOTER */
+
+div[id^='settingsFooter'] [data-testid='pt-editor'][data-fullscreen='false'] {
+  height: 8em!important;
+}
+
+.pt-block, .pt-block * {
+  font-family: var(--font-untitled-sans)!important;
+}
+
+html, body {
+  margin: 0!important;
+  padding: 0!important;
+  font-family: var(--font-untitled-sans) !important;
+  
+}
+
+
+#sanity {
+  font-family: var(--font-untitled-sans)!important;
+  
+}
