@@ -1,6 +1,6 @@
 # afaik
 
-A modern web application built with Next.js 15, Sanity v3 CMS, and Tailwind CSS.
+A modern web boilerplate built with Next.js 15, Sanity v3 CMS, and Tailwind CSS (WIP)
 
 ## Tech Stack
 
