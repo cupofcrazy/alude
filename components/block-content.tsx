@@ -1,8 +1,18 @@
 import { Image } from "@/components/image"
 import { getImageDimensions } from "@sanity/asset-utils"
 import { PortableText, PortableTextProps, PortableTextComponents, PortableTextMarkComponentProps, PortableTextComponentProps } from "@portabletext/react"
+import { MuxVideo } from "./video"
 import { A11yImage } from "@/sanity.types"
 import { urlFor } from "@/sanity/lib/image"
+
+
+const formatAspectRatio = (value: any) => {
+  const formatted = value.split(":") as [string, string]
+  const width = parseInt(formatted[0])
+  const height = parseInt(formatted[1])
+
+  return width / height
+}
 
 const components: PortableTextComponents = {
   types: {
@@ -25,6 +35,15 @@ const components: PortableTextComponents = {
             40vw"
         />
       )
+    },
+    video: ({ value }: { value: any }) => {
+      const props = value.asset
+      const aspect_ratio = props.data.aspect_ratio
+      
+      const videoProps = {
+        playbackId: props.playbackId,
+      }
+      return <MuxVideo aspectRatio={formatAspectRatio(aspect_ratio)} {...videoProps} />
     }
   },
   marks: {

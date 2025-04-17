@@ -5,7 +5,8 @@ import {home} from './documents/home'
 import {blockContent} from './objects/block-content'
 import { a11yImage } from './objects/a11y-image'
 import { seo } from './objects/seo'
+import { video } from './objects/video'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [blockContent, home, a11yImage, seo],
+  types: [blockContent, home, a11yImage, seo, video as SchemaTypeDefinition],
 }

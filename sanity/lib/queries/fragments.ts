@@ -8,3 +8,12 @@ export const a11yImage = defineQuery(`
     caption
   }
 `)
+
+
+export const videoQuery = defineQuery(`
+  _type == "video" => {
+    ...,
+    asset->,
+
+  }
+`)
