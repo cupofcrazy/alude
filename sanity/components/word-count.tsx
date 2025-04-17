@@ -1,6 +1,4 @@
-import { useFormValue } from 'sanity'
-import { Flex, Badge, Inline, Stack } from '@sanity/ui'
-import { PortableTextBlock } from '@portabletext/types'
+import { Badge, Inline, Stack } from '@sanity/ui'
 import { toPlainText } from 'next-sanity'
 
 export const WordCount = (props: any) => {
