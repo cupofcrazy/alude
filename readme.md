@@ -1,6 +1,6 @@
 # afaik
 
-A modern web boilerplate built with Next.js 15, Sanity v3 CMS, and Tailwind CSS (WIP)
+A modern web boilerplate built with Next.js 15, Sanity v3 CMS, and Tailwind CSS
 
 ## Tech Stack
 
@@ -8,8 +8,8 @@ A modern web boilerplate built with Next.js 15, Sanity v3 CMS, and Tailwind CSS 
 - **CMS**: Sanity v3
 - **Styling**: Tailwind CSS 4
 - **UI**: Base UI Components
-- **Animation**: Motion
-- **TypeScript**: TypeScript support
+- **Animation**: Motion.dev
+- **Video**: Mux Player
 
 ## Getting Started
 
@@ -21,7 +21,8 @@ A modern web boilerplate built with Next.js 15, Sanity v3 CMS, and Tailwind CSS 
    bun install
    ```
 3. Copy `.env.example` to `.env.local` and fill in your Sanity credentials
-4. Run the development server:
+4. Add your Mux credentials to the Sanity Studio UI (this usually pops up when you run attempt to upload video for the first time)
+5. Run the development server:
    ```bash
    npm run dev
    # or
@@ -44,6 +45,8 @@ A modern web boilerplate built with Next.js 15, Sanity v3 CMS, and Tailwind CSS 
 - `/sanity` - Sanity CMS configuration and schemas
 - `/styles` - Global styles
 - `/public` - Static assets
+- `/sanity.types.ts` - Generated Sanity schema types
+- `/schema.json` - Sanity schema definition
 
 ## License
 
