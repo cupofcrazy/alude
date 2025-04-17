@@ -7,7 +7,7 @@ export default async function Home() {
 
   return (
     <div className="p-3">
-      <h1>{home?.data?.title}</h1>
+      <h1 className="text-2xl">{home?.data?.title}</h1>
       
       <BlockContent value={home?.data?.content} />
     </div>
