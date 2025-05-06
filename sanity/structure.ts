@@ -1,6 +1,7 @@
 import type {StructureResolver} from 'sanity/structure'
 import { HomeIcon } from './components/icons'
 
+const IGNORE_TYPES = ["home", "mux.videoAsset"]
 
 // https://www.sanity.io/docs/structure-builder-cheat-sheet
 export const structure: StructureResolver = (S) =>
@@ -16,6 +17,6 @@ export const structure: StructureResolver = (S) =>
         ),
       S.divider(),
       ...S.documentTypeListItems().filter(
-        (item) => item.getId() && !['home'].includes(item.getId()!),
+        (item) => item.getId() && !IGNORE_TYPES.includes(item.getId()!),
       ),
     ])
