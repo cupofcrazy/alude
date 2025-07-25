@@ -1,5 +1,4 @@
 import type {StructureResolver} from 'sanity/structure'
-import { HomeIcon } from './components/icons'
 
 const IGNORE_TYPES = ["home", "mux.videoAsset"]
 
@@ -9,7 +8,7 @@ export const structure: StructureResolver = (S) =>
     .title('Content')
     .items([
       S.documentTypeListItem('home')
-        .icon(HomeIcon)
+        .icon('🏠')
         .child(
           S.document()
             .schemaType("home")
